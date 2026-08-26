@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0e1420;--card:#1a2236;--teal:#2db49b;--teal-dim:#1a7a6b;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;--blue:#3b9eff;--slate:#94a3b8;--border:rgba(255,255,255,0.08);--font:'Inter',sans-serif;--display:'Space Grotesk',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:rgba(255,255,255,0.88);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#131927}::-webkit-scrollbar-thumb{background:#334155;border-radius:3px}::selection{background:rgba(45,180,155,.3);color:#fff}
+h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;color:#fff;line-height:1.2}p{color:var(--slate);line-height:1.75}a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--font)}input,textarea,select{font-family:var(--font)}img{max-width:100%;display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes ping{0%{transform:scale(1);opacity:1}100%{transform:scale(2.2);opacity:0}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 16px rgba(45,180,155,.3)}50%{box-shadow:0 0 36px rgba(45,180,155,.65)}}
+@keyframes slide-in{from{transform:translateX(110%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes wave{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes emerg{0%,100%{background:rgba(239,68,68,.08)}50%{background:rgba(239,68,68,.22)}}
+.eyeway-popup .leaflet-popup-content-wrapper{background:#1a2236;border:1px solid rgba(45,180,155,.3);border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.6);color:#fff}
+.eyeway-popup .leaflet-popup-tip{background:#1a2236}

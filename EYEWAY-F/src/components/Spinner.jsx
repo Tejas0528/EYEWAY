@@ -1,0 +1,2 @@
+export default function Spinner(){return<div style={{display:"flex",justifyContent:"center",alignItems:"center",padding:40}}><div style={{width:36,height:36,border:"3px solid rgba(255,255,255,.08)",borderTop:"3px solid #2db49b",borderRadius:"50%",animation:"spin .7s linear infinite"}}/></div>}
+export function InlineSpinner({size=16,color="#fff"}){return<span style={{display:"inline-block",width:size,height:size,border:`2px solid ${color}30`,borderTop:`2px solid ${color}`,borderRadius:"50%",animation:"spin .7s linear infinite",flexShrink:0}}/>}
