@@ -75,11 +75,19 @@ async def get_current_user(
     except JWTError:
         raise credentials_exception
 
-    # PostgreSQL user lookup
     result = await db.execute(
         text(
             """
-            SELECT *
+            SELECT
+                id,
+                name,
+                email,
+                phone,
+                hashed_password,
+                role,
+                department,
+                is_active,
+                created_at
             FROM users
             WHERE id = :user_id
             """
@@ -87,12 +95,12 @@ async def get_current_user(
         {"user_id": user_id},
     )
 
-    user_row = result.mappings().first()
+    user = result.mappings().first()
 
-    if not user_row:
+    if not user:
         raise credentials_exception
 
-    user = dict(user_row)
+    user = dict(user)
 
     if not user.get("is_active", True):
         raise HTTPException(
